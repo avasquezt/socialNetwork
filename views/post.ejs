@@ -28,11 +28,14 @@
           </div>
           <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
         </form>
-        <ul>
+        <dl>
           <% for(var i=0; i<comments.length; i++) {%>
-            <li>
+            <dt>
+              <span>User <%=comments[i].user.userName%> commented:</span>
+            </dt>
+            <dd>
               <%=comments[i].comment%>
-            </li>
+            </dd>
           <% } %>
         </ul>
         <%}%>
